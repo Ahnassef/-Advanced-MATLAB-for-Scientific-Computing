@@ -1,4 +1,7 @@
 %%
+clear all
+close all 
+clc
 %% Numeric arrays
  % Creation
  M = reshape(linspace(11,18,8),[2,2,2])
@@ -18,7 +21,7 @@
  M([1,2],[2,1],[2,1])
  A1 = [2,2;2,1]; v = [2,1];
  M(A1,v,1)
- isequal(M(A1,v,1),M(vec(A1),v,1))
+ isequal(M(A1,v,1),M(reshape(A1,[4,1]),v,1))
  
  %% Logical indexing
  P = rand(5000);
